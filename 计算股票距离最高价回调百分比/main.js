@@ -1,9 +1,9 @@
 import { request, StockInfo } from './request.js';
 import { stockArr } from './stockData.js';
 
-let stockInfoArr = [] // 临时保存请求过来的股票最新信息, 每一轮请求前都需被清空
+let stockInfoArr = []   // 临时保存请求过来的股票最新信息, 每一轮请求前都需被清空
 let delayUpdate = 60000 // 设置间隔多长时间更新股票信息
-let delayDisplay = 500 // 设置从请求数据到显示出来的延迟时间
+let delayDisplay = 500  // 设置从请求数据到显示出来的延迟时间
 
 /**
  * function
@@ -12,13 +12,13 @@ let delayDisplay = 500 // 设置从请求数据到显示出来的延迟时间
 function requestAllStockInfos() {
   for (let i = 0; i < stockArr.length; i++) {
     request(stockArr[i].stockCode) // 依据 stockCode 请求每只股票的数据
-    .then(res => {
-      let stockInfo = new StockInfo(res, stockArr, i) // 保存每只股票对象
-      stockInfoArr.push(stockInfo) // 请求到的每只股票对象都被放进临时保存股票最新信息的数组stockInfoArr
-      console.log(stockInfo);
-    }, err => {
-      console.log('失败', err);
-    })
+      .then(res => {
+        let stockInfo = new StockInfo(res, stockArr, i) // 保存每只股票对象
+        stockInfoArr.push(stockInfo) // 请求到的每只股票对象都被放进临时保存股票最新信息的数组stockInfoArr
+        console.log(stockInfo);
+      }, err => {
+        console.log('失败', err);
+      })
   }
 }
 
@@ -40,7 +40,7 @@ function sortByRetracePoint() {
 function displayStockInfos() {
   setTimeout(() => {
     for (let i = 0; i < stockInfoArr.length; i++) {
-      var tr = document.createElement('tr') // 循环创建一行来显示每只股票信息
+      var tr = document.createElement('tr')   // 循环创建一行来显示每只股票信息
       var tbody = document.getElementById('tbody')
       
       for (let key in stockInfoArr[i]) {
@@ -64,6 +64,7 @@ function displayStockInfos() {
     while (tbody.hasChildNodes()) {
       tbody.removeChild(tbody.lastChild)
     }
+    console.clear() // 每轮清空控制台的输出
   }, delayUpdate - 1);
 }
 
