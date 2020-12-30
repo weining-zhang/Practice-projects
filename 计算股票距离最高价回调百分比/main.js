@@ -3,7 +3,7 @@ import { stockArr } from './stockData.js';
 
 let stockInfoArr = []   // 临时保存请求过来的股票最新信息, 每一轮请求前都需被清空
 let delayUpdate = 60000 // 设置间隔多长时间更新股票信息
-let delayDisplay = 500  // 设置从请求数据到显示出来的延迟时间
+let delayDisplay = 2000  // 设置从请求数据到显示出来的延迟时间
 
 /**
  * function
@@ -59,13 +59,13 @@ function displayStockInfos() {
   }, delayDisplay + 1);
   
   // 在更新股票信息前需先清除原先渲染出来的股票信息
-  setTimeout(() => {
-    var tbody = document.getElementById('tbody')
-    while (tbody.hasChildNodes()) {
-      tbody.removeChild(tbody.lastChild)
-    }
-    console.clear() // 每轮清空控制台的输出
-  }, delayUpdate - 1);
+  // setTimeout(() => {
+  //   var tbody = document.getElementById('tbody')
+  //   while (tbody.hasChildNodes()) {
+  //     tbody.removeChild(tbody.lastChild)
+  //   }
+  //   console.clear() // 每轮清空控制台的输出
+  // }, delayUpdate - 1);
 }
 
 
@@ -75,8 +75,8 @@ sortByRetracePoint()
 displayStockInfos()
 
 // 每间隔 delay 时间更新股票信息
-setInterval(() => {
-  requestAllStockInfos()
-  sortByRetracePoint()
-  displayStockInfos()
-}, delayUpdate)
+// setInterval(() => {
+//   requestAllStockInfos()
+//   sortByRetracePoint()
+//   displayStockInfos()
+// }, delayUpdate)
