@@ -2,7 +2,7 @@
 export function request(code) {
   var xhr = new XMLHttpRequest()
   return new Promise((resolve, reject) => {
-    xhr.open('get', `https://api.doctorxiong.club/v1/stock?code=${code}`, true)
+    xhr.open('get', `https://api.doctorxiong.club/v1/stock?code=${code}&token=9xblIjLBut`, true)
     // 接收返回值
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
