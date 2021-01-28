@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股价估值</title>
+  <style>
+    /* #loadedNum {
+      font-family: KaiTi;
+      font-weight: bold;
+    } */
+    #table {
+      margin: 0 auto;
+      width: 1100px;
+      font-family: KaiTi;
+    }
+    table caption {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    thead tr {
+      background-color: skyblue;
+    }
+    tbody tr:nth-child(odd) {
+      background-color:#cccccc;
+    }
+    tbody tr:nth-child(even) {
+      background-color:rgb(123, 211, 123);
+    }
+    tbody tr td:nth-child(9) {
+      color: rgb(226, 0, 0);
+    }
+    td {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table id="table" cellspacing="0" cellpadding="7px">
+    <caption>股票估值计算：</caption>
+    <thead>
+      <tr>
+        <th>股票名称</th>
+        <th>总股本</th>
+        <th>20年净利润</th>
+        <th>21年净利润(预测)</th>
+        <th>近几年最低市盈率</th>
+        <th>平均市盈率</th>
+        <th>20年合理价格</th>
+        <th>20年底部价格</th>
+        <th>21年底部价格</th>
+        <th>21年合理价格</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <!-- 
+        <tr>
+          <td>南极电商</td>
+          <td>24.55亿股</td>
+          <td>15.1亿</td>
+          <td>18.8亿</td>
+          <td>16.03</td>
+          <td>31.27</td>
+          <td>19.23元</td>
+          <td>9.86元</td>
+          <td>12.28元</td>
+          <td>23.95元</td>
+        </tr> 
+      -->
+    </tbody>
+  </table>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
