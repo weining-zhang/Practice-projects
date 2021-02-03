@@ -17,7 +17,7 @@ export const stockArr = [
   {name: '(*)格力电器',    highestPrice: 69.50,  countRetracePoint, stockCode: '000651'},
   {name: '(*)上海机场',    highestPrice: 88.11,  countRetracePoint, stockCode: '600009'},
   {name: '洋河股份',       highestPrice: 189.90, countRetracePoint, stockCode: '002304'},
-  {name: '五粮液',         highestPrice: 279.00, countRetracePoint, stockCode: '000858'},
+  {name: '五粮液',         highestPrice: 330.00, countRetracePoint, stockCode: '000858'},
   {name: '通策医疗',       highestPrice: 244.84, countRetracePoint, stockCode: '600763'},
   {name: '凯莱英',         highestPrice: 295.00, countRetracePoint, stockCode: '002821'},
   {name: '晨光文具',       highestPrice: 86.44,  countRetracePoint, stockCode: '603899'},
