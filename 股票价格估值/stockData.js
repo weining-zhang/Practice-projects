@@ -14,7 +14,7 @@ export const stockArr = [
     profit2020: 9.2,
     profit2021: 11.2,
     lowestPE: 21.94,
-    averagePE: 34.9
+    averagePE: 36.25
   }
 ]
 
