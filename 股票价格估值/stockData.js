@@ -2,11 +2,11 @@
 export const stockArr = [
   {
     name: '南极电商',
-    totalStock: 24.55,
-    profit2020: 15.1,
-    profit2021: 18.8,
-    lowestPE: 16.03,
-    averagePE: 31.27
+    totalStock: 24.55, // 总股本
+    profit2020: 15.1, // 2020年净利润
+    profit2021: 18.8, // 2021年净利润
+    lowestPE: 16.03, // 近几年最低市盈率
+    averagePE: 31.27 // 近几年平均市盈率
   },
   {
     name: '中顺洁柔',
